@@ -1,0 +1,1 @@
+Simpluzz websituzz to translatuzz words.

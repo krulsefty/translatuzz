@@ -1,0 +1,51 @@
+<!--- sefty --->
+<!-- sefty -->
+<!--- sefty --->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Translatuzz</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+
+  <div id="gradient"></div>
+
+  <main>
+    <h1>Translatuzz</h1>
+    <input type="text" id="input">
+    <p id="output"></p>
+  </main>
+
+  <script>
+    document.getElementById("input").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        funcuzz()
+      }
+    })
+
+    function funcuzz() {
+      const input = document.getElementById("input").value
+
+      let output = input.slice(0, -2) + "uzz"
+
+      if (!input) return
+
+      if (input == "girls") output = "huzz"
+      else if (input == "fine shyt") output = "huzz"
+      else if (input.charAt(input.length - 1) == "a") output = input.slice(0, -1) + "uzz"
+      else if (input.charAt(input.length - 1) == "o") output = input.slice(0, -1) + "uzz"
+      else if (input.charAt(input.length - 1) == "y") output = input.slice(0, -1) + "uzz"
+      else if (input.charAt(input.length - 1) == "d") output = input + "uzz"
+      
+      document.getElementById("output").textContent = output
+    }
+  </script>
+
+</body>
+
+</html>
